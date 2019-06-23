@@ -1,0 +1,728 @@
+/****************************************************************************
+ ****************************************************************************
+    
+    Default stylesheet
+    
+*****************************************************************************
+*****************************************************************************/
+:root {
+    /* Define color scheme */
+    --color-light-theme   : #ffffff;
+    --color-dark-theme    : #666666;
+    --color-mint-green    : #4aaaa5;
+    --color-separator     : #d8d8d8;
+    --color-text          : #202020;
+    --color-text-highlight: #ff6600;
+}
+
+body {
+    background-image : url("../images/crossword.png");
+    background-repeat: repeat;
+    font-family      : "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size        : 17px;
+}
+
+.container {
+    width : 960px;
+    margin: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear  : both;
+}
+
+h1, h2 {
+    color         : var(--color-mint-green);
+    font-family   : "Georgia", "Times", "Times New Roman", serif;
+    font-weight   : bold;
+    letter-spacing: 0.015em;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+p strong, label strong {
+    color      : var(--color-text-highlight);
+    font-weight: bold;
+}
+
+figcaption strong {
+    font-weight: bold;
+}
+
+
+/* All things related to top pane */
+#top_pane {
+    background   : var(--color-light-theme);
+    
+    border-bottom: 2px solid var(--color-separator);
+}
+
+#website_name {
+    background-color: var(--color-mint-green);
+    color           : var(--color-light-theme);
+    font-family     : "Georgia", "Times", "Times New Roman", serif;
+    font-size       : 1.9em;
+    font-weight     : bold;
+    letter-spacing  : 0.02em;
+    text-align      : center;
+
+    float           : left;
+    width           : 240px;         /* 25% of 960px */
+    padding         : 28.8px 19.2px; /* 3%, 2% of 960px */
+}
+
+#website_menu {
+    font-size     : 1.3em;
+    letter-spacing: 0.02em;
+
+    float         : right;
+    padding       : 33.6px 9.6px; /* 3.5%, 1% of 960px */
+}
+
+#website_menu a {
+    color          : var(--color-text);
+    text-decoration: none;
+
+    border-right   : 2px solid var(--color-separator);
+    margin         : 0 12.5px;
+    padding-right  : 30px;
+}
+
+#website_menu a:hover {
+    text-decoration: underline;
+}
+
+#website_menu a.last_link {
+    border-right : 0;
+    padding-right: 12.5px;
+}
+
+
+/* All things related to the middle pane */
+#middle_pane {
+    padding: 35px 0 40px 0;
+}
+
+.left_pane {
+    background-color: var(--color-light-theme);
+    box-shadow      : 0 3px  6px 4px rgba(0, 0, 0, 0.12),
+                      0 4px 14px 6px rgba(0, 0, 0, 0.07);
+    
+    float           : left;
+    width           : 550px;
+    margin          : 40px 0;
+    padding         : 40px 50px 30px 50px;
+}
+
+.left_pane:hover {
+    box-shadow: 0 4px  8px  6px rgba(250, 242, 203, 0.60),
+                0 6px 20px 10px rgba(250, 242, 203, 0.52);
+}
+
+.left_pane h1 {
+    margin-bottom : 30px;
+    border-bottom : 2px solid var(--color-separator);
+    padding-bottom: 20px;
+}
+
+
+/* Begin: index.html */
+.left_pane .profile_photo img {
+    float     : left;
+    max-width : 100%;
+    max-height: 100%;
+    width     : 200px;
+    margin    : 0.4em 25px 0.4em 0; /* 50% of 0.8em (line height of p) */
+}
+/* End: index.html */
+
+
+/* Begin: portfolio.html */
+.left_pane .portfolio {
+    float        : left;
+    position     : relative; /* For figcaption (position: absolute) */
+    margin-top   : 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.left_pane .portfolio img {
+    border    : 2px solid var(--color-separator);
+    
+    max-width : 100%;
+    max-height: 100%;
+    width     : 226px;
+    margin    : 0 20px 20px 20px;
+}
+
+.left_pane .portfolio figcaption {
+    background-color: var(--color-mint-green);
+    color           : var(--color-light-theme);
+    font-size       : 1.1em;
+    line-height     : 1.2em;
+    text-align      : center;
+
+    position        : absolute;
+    width           : 200px;
+    bottom          : 40px;
+    left            : 20px;
+    padding         : 15px;
+}
+/* End: portfolio.html */
+
+
+/* Begin: contact.html */
+.left_pane label {
+    font-size    : 1.3em;
+    font-weight  : bold;
+
+    display      : block;
+    margin-bottom: 15px;
+}
+
+.left_pane input {
+    font-size    : 1.1em;
+    
+    display      : block;
+    width        : 96%;
+    margin-bottom: 15px;
+    padding      : 8px 4px 8px 12px;
+}
+
+.left_pane textarea {
+    font-family  : "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size    : 1.1em;
+
+    display      : block;
+    max-width    : 96%;
+    max-height   : 240px;
+    width        : 96%;
+    height       : 160px;
+    margin-bottom: 15px;
+    padding      : 8px 4px 8px 12px;
+}
+
+.left_pane #form_submit {
+    background-color: var(--color-mint-green);
+    color           : var(--color-light-theme);
+    font-size       : 1.3em;
+    font-weight     : bold;
+    text-align      : center;
+    
+    display         : block;
+    width           : 36%;
+    margin-top      : 8%;
+    padding         : 2% 0;
+}
+/* End: contact.html */
+
+
+.left_pane p {
+    line-height   : 1.8em;
+    
+    padding-bottom: 1.2em;
+}
+
+.right_pane {
+    background-color: var(--color-light-theme);
+    box-shadow      : 0 3px  6px 4px rgba(0, 0, 0, 0.12),
+                      0 4px 14px 6px rgba(0, 0, 0, 0.07);
+    
+    float           : right;
+    width           : 220px;
+    margin          : 40px 0;
+    padding         : 45px 25px 35px 25px;
+}
+
+.right_pane:hover {
+    box-shadow: 0 4px  8px  6px rgba(250, 242, 203, 0.60),
+                0 6px 20px 10px rgba(250, 242, 203, 0.52);
+}
+
+.right_pane h2 {
+    margin-top    : 2px;
+    margin-bottom : 24.71px; /* 1.4/1.7 of 30px (margin-bottom of h1) */
+    border-bottom : 2px solid var(--color-separator);
+    padding-bottom: 18px;
+}
+
+.right_pane figure {
+    margin: auto;
+}
+
+.right_pane img {
+    width : 36%;
+    margin: 6%;
+}
+
+.right_pane img:hover {
+    background-color: var(--color-separator);
+    opacity         : 0.65;
+}
+
+
+/* All things related to the bottom pane */
+#bottom_pane {
+    background-color: var(--color-dark-theme);
+    
+    border-top      : 15px solid var(--color-mint-green);
+    padding         : 40px;
+}
+
+#copyright {
+    color         : var(--color-light-theme);
+    letter-spacing: 0.005em;
+    line-height   : 1.5em;
+    text-align    : center;
+}
+
+#copyright a {
+    color: var(--color-light-theme);
+}
+
+
+
+/****************************************************************************
+ ****************************************************************************
+    
+    Stylesheet for desktop (reduced)
+    
+*****************************************************************************
+*****************************************************************************/
+@media all and (max-width: 980px) and (min-width: 769px), all and (max-device-width: 980px) and (min-device-width: 769px) {
+    :root {
+        --color-mint-green: #b9c149;
+    }
+
+    .container {
+        width : 98%; /* 960px relative to 980px */
+        margin: auto;
+    }
+    
+
+    /* All things related to top pane */
+    #website_menu {
+        text-align: right;
+        
+        position  : absolute;
+        width     : 440px;
+        top       : 0;
+        right     : 0;
+    }
+
+
+    /* All things related to the middle pane */
+    .left_pane {
+        font-size: 1.77vw;                  /* 17px relative to 960px */
+
+        width    : 57.29%;                  /* 550px relative to 960px */
+        margin   : 4.17% 0;                 /* 40px relative to 960px */
+        padding  : 4.17% 5.21% 3.13% 5.21%; /* 40px, 50px, 30px, 50px relative to 960px */
+    }
+
+    .left_pane h1 {
+        margin-bottom : 5.45%; /* 30px relative to 550px */
+        padding-bottom: 3.64%; /* 20px relative to 550px */
+    }
+
+
+    /* Begin: index.html */
+    .left_pane .profile_photo img {
+        display      : block;
+        float        : none;
+        max-width    : 50%;
+        max-height   : 50%;
+        width        : 50%;
+        margin       : auto;
+        margin-top   : 0.4em;
+        margin-bottom: 1.6em;
+    }
+    /* End: index.html */
+
+
+    /* Begin: portfolio.html */
+    .left_pane .portfolio {
+        width : 70%;
+        margin: 0 15% 4% 15%;
+    }
+
+    .left_pane .portfolio img {
+        width : 100%;
+        margin: 1.82% auto;
+    }
+
+    .left_pane .portfolio figcaption {
+        width  : 90%;
+        bottom : 7.5%;
+        left   : 0;
+        padding: 5.5%;
+    }
+    /* End: portfolio.html */
+
+
+    /* Begin: contact.html */
+    .left_pane label {
+        margin-bottom: 2.73%; /* 15px relative to 550px */
+    }
+
+    .left_pane input {
+        margin-bottom: 2.73%;                   /* 15px relative to 550px */
+        padding      : 1.45% 0.72% 1.45% 2.18%; /* 8px, 4px, 8px, 12px relative to 550px */
+    }
+
+    .left_pane textarea {
+        height       : 29.09%;                  /* 160px relative to 550px */
+        margin-bottom: 2.73%;                   /* 15px relative to 550px */
+        padding      : 1.45% 0.72% 1.45% 2.18%; /* 8px, 4px, 8px, 12px relative to 550px */
+    }
+    /* End: contact.html */
+
+
+    .right_pane {
+        font-size: 1.77vw;                  /* 17px relative to 960px */
+
+        width    : 22.92%;                  /* 220px relative to 960px */
+        margin   : 4.17% 0;                 /* 40px relative to 960px */
+        padding  : 4.69% 2.60% 3.65% 2.60%; /* 45px, 25px, 35px, 25px relative to 960px */
+    }
+
+    .right_pane h2 {
+        margin-top    : 0.91%;  /* 2px relative to 220px */
+        margin-bottom : 11.23%; /* 24.71px relative to 220px */
+        padding-bottom: 8.18%;  /* 18px relative to 220px */
+    }
+
+
+    /* All things related to the bottom pane */
+}
+
+
+
+/****************************************************************************
+ ****************************************************************************
+    
+    Stylesheet for tablet
+    
+*****************************************************************************
+*****************************************************************************/
+@media all and (max-width: 768px) and (min-width: 641px), all and (max-device-width: 768px) and (min-device-width: 641px) {
+    :root {
+        --color-mint-green: #c81a4c;
+    }
+
+    body {
+        font-size: 14px;
+        font-size: 2.2vw;
+    }
+    
+    .container {
+        width: 98%;
+    }
+
+    /* All things related to top pane */
+    #website_name {
+        width  : 31.90%;      /* 240px relative to (.98*768px) */
+        padding: 3.83% 2.55%; /* 28.8px, 19.2px relative to (.98*768px) */
+    }
+
+    #website_menu {
+        text-align: right;
+        
+        position  : absolute;
+        top       : 0;
+        right     : 0;
+        width     : 100%;
+        padding   : 4.38% 1.25%; /* 33.6px, 9.6px relative to 768px */
+    }
+
+    #website_menu a {
+        margin       : 0 1.63%; /* 12.5px relative to 768px */
+        padding-right: 3.90%;   /* 30px relative to 768px */
+    }
+
+    #website_menu a.last_link {
+        padding-right: 1.63%;
+    }
+
+
+    /* All things related to the middle pane */
+    #middle_pane {
+        padding: 4.56% 0 5.21% 0; /* 35px, 40px relative to 768px */
+    }
+
+    .left_pane {
+        width  : 89.58%;
+        margin : 4.17% 0 7% 0;            /* Top margin same as desktop */
+        padding: 4.17% 5.21% 3.13% 5.21%; /* Same as desktop */
+    }
+
+    .left_pane:hover {
+        box-shadow: 0 3px  6px 4px rgba(0, 0, 0, 0.12),
+                    0 4px 14px 6px rgba(0, 0, 0, 0.07);
+    }
+
+    .left_pane h1 {
+        margin-bottom : 5.45%; /* Same as desktop */
+        padding-bottom: 3.64%; /* Same as desktop */
+    }
+
+
+    /* Begin: index.html */
+    .left_pane .profile_photo img {
+        max-width : 27%;
+        max-height: 27%;
+        width     : 27%;
+        margin    : 0.4em 5% 1.6em 0;
+    }
+    /* End: index.html */
+
+
+    /* Begin: portfolio.html */
+    .left_pane .portfolio {
+        width : 41.2%;
+        margin: 0 4% 5% 4%;
+    }
+
+    .left_pane .portfolio img {
+        width : 100%;
+        margin: 1.5%;
+    }
+
+    .left_pane .portfolio figcaption {
+        width  : 94.5%;
+        bottom : 10%;
+        left   : 1.5%;
+        padding: 3.5%;
+    }
+    /* End: portfolio.html */
+
+
+    /* Begin: contact.html */
+    .left_pane label {
+        margin-bottom: 2.73%; /* 15px relative to 550px */
+    }
+
+    .left_pane input {
+        margin-bottom: 2.73%;                   /* 15px relative to 550px */
+        padding      : 1.45% 0.72% 1.45% 2.18%; /* 8px, 4px, 8px, 12px relative to 550px */
+    }
+
+    .left_pane textarea {
+        height       : 29.09%;                  /* 160px relative to 550px */
+        margin-bottom: 2.73%;                   /* 15px relative to 550px */
+        padding      : 1.45% 0.72% 1.45% 2.18%; /* 8px, 4px, 8px, 12px relative to 550px */
+    }
+    /* End: contact.html */
+
+    .right_pane {
+        clear  : both;
+        float  : none;
+        width  : 89.58%;
+        margin : 4.17% 0;                 /* Same as desktop */
+        padding: 4.17% 5.21% 3.13% 5.21%; /* Same as desktop */
+    }
+
+    .right_pane:hover {
+        box-shadow: 0 3px  6px 4px rgba(0, 0, 0, 0.12),
+                    0 4px 14px 6px rgba(0, 0, 0, 0.07);
+    }
+
+    .right_pane h2 {
+        margin-bottom : 6%;
+        padding-bottom: 5%;
+    }
+
+    .right_pane img {
+        width : 15%;
+        margin: 2%;
+    }
+
+
+    /* All things related to the bottom pane */
+    #bottom_pane {
+        padding: 5.5%;
+    }
+}
+
+
+
+/****************************************************************************
+ ****************************************************************************
+    Stylesheet for mobile
+    
+*****************************************************************************
+*****************************************************************************/
+@media all and (max-width: 640px), all and (max-device-width: 640px) {
+    :root {
+        --color-mint-green: #7486cb;
+    }
+
+    body {
+        font-size: 18px;
+        font-size: 2.81vw;
+    }
+    
+    .container {
+        width: 100%;
+    }
+
+    /* All things related to top pane */
+    #website_name {
+        float  : none;
+        width  : 100%;
+        padding: 4.5% 0;
+    }
+
+    #website_menu {
+        text-align: center;
+        
+        float     : none;
+        position  : static;
+        width     : 100%;
+        padding   : 5% 0;
+    }
+
+    #website_menu a {
+        background-color: var(--color-separator);                                 /* Fallback */
+        background      : -webkit-linear-gradient(white, var(--color-separator)); /* For Safari 5.1 to 6.0 */
+        background      :      -o-linear-gradient(white, var(--color-separator)); /* For Opera 11.1 to 12.0 */
+        background      :    -moz-linear-gradient(white, var(--color-separator)); /* For Firefox 3.6 to 15 */
+        background      :         linear-gradient(white, var(--color-separator)); /* Standard syntax */
+        
+        margin          : 0 2.5%;
+        border          : 1px solid var(--color-separator);
+        padding         : 2% 5%;
+    }
+
+    #website_menu a:hover {
+        text-decoration: none;
+    }
+
+    #website_menu a.last_link {
+        border       : 1px solid var(--color-separator);
+        padding-right: 5%;
+    }
+
+
+    /* All things related to the middle pane */
+    #middle_pane {
+        width  : 98%;
+        padding: 5.47% 1% 6.25% 1%; /* 35px, 40px relative to 640 px */
+    }
+
+    .left_pane {
+        width  : 89.58%;
+        margin : 4.17% 0 7% 0;            /* Same as tablet */
+        padding: 4.17% 5.21% 3.13% 5.21%; /* Same as tablet */
+    }
+
+    .left_pane:hover {
+        box-shadow: 0 3px  6px 4px rgba(0, 0, 0, 0.12),
+                    0 4px 14px 6px rgba(0, 0, 0, 0.07);
+    }
+
+    .left_pane h1 {
+        margin-bottom : 6%;
+        padding-bottom: 5%;
+    }
+
+
+    /* Begin: index.html */
+    .left_pane .profile_photo img {
+        display      : block;
+        float        : none;
+        max-width    : 50%;
+        max-height   : 50%;
+        width        : 50%;
+        margin       : auto;
+        margin-top   : 0.4em;
+        margin-bottom: 1.6em;
+    }
+    /* End: index.html */
+
+
+    /* Begin: portfolio.html */
+    .left_pane .portfolio {
+        width : 70%;
+        margin: 0 15% 4% 15%;
+    }
+
+    .left_pane .portfolio img {
+        width        : 100%;
+        margin       : auto;
+        margin-top   : 1.82%;
+        margin-bottom: 1.82%;
+    }
+
+    .left_pane .portfolio figcaption {
+        width  : 90%;
+        bottom : 7.5%;
+        left   : 0;
+        padding: 5.5%;
+    }
+    /* End: portfolio.html */
+
+
+    /* Begin: contact.html */
+    .left_pane label {
+        margin-bottom: 2.73%; /* 15px relative to 550px */
+    }
+
+    .left_pane input {
+        margin-bottom: 2.73%;                   /* 15px relative to 550px */
+        padding      : 1.45% 0.72% 1.45% 2.18%; /* 8px, 4px, 8px, 12px relative to 550px */
+    }
+
+    .left_pane textarea {
+        height       : 29.09%;                  /* 160px relative to 550px */
+        margin-bottom: 2.73%;                   /* 15px relative to 550px */
+        padding      : 1.45% 0.72% 1.45% 2.18%; /* 8px, 4px, 8px, 12px relative to 550px */
+    }
+    /* End: contact.html */
+
+
+    .left_pane p {
+        clear: both;
+    }
+
+    .right_pane {
+        clear  : both;
+        float  : none;
+        width  : 89.58%;
+        margin : 4.17% 0;                 /* Same as tablet */
+        padding: 4.17% 5.21% 3.13% 5.21%; /* Same as tablet */
+    }
+
+    .right_pane:hover {
+        box-shadow: 0 3px  6px 4px rgba(0, 0, 0, 0.12),
+                    0 4px 14px 6px rgba(0, 0, 0, 0.07);
+    }
+
+    .right_pane h2 {
+        margin-bottom : 6%;
+        padding-bottom: 5%;
+    }
+
+    .right_pane img {
+        width : 15%;
+        margin: 2%;
+    }
+
+    .right_pane img:hover {
+        background-color: var(--color-light-theme);
+        opacity         : 1;
+    }
+
+
+    /* All things related to the bottom pane */
+    #bottom_pane {
+        padding: 5.5%;
+    }
+}
